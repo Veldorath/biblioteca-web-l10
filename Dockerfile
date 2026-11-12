@@ -1,5 +1,5 @@
 # biblioteca-web: dos etapas. Node compila el Angular; nginx sirve lo compilado.
-FROM node:24-alpine AS compilar
+FROM node:24-slim AS compilar
 WORKDIR /app
 COPY package.json package-lock.json ./
 RUN npm ci
